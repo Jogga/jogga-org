@@ -21,7 +21,28 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+	<div id="header"><span class="title">Backbone Cellar</span></div>
 
-    </body>
+	<div id="sidebar"></div>
+
+	<div id="content">
+		<h2>Welcome to Backbone Cellar</h2>
+		<p>This is a sample appplication</p>
+	</div>
+
+	<!-- Templates -->
+	<script type="text/template" id="tpl-wine-list-item">
+		<a href="#wines/<%= id %>"><%= name %></a>
+	</script>
+
+	<script type="text/template" id="tpl-wine-details">
+		<div class="form-left-col">
+			<label>Id:</label>
+			<input type="text" id="wineId" name="id" value="<%= id %>" disabled />
+			
+			<label>Name:</label>
+			<input type="text" id="name" name="name" value="<%= name %>" required />
+		</div>
+	</script>
+  </body>
 </html>

@@ -4,19 +4,27 @@ requirejs.config({
 		underscore: 'lib/underscore',
 		jquery: 'lib/jquery-1.9.1.min'
 	},
+//	shim: {
+//		'backbone': {
+//			deps: ['underscore', 'jquery'],
+//			exports: 'backbone'
+//		},
+//		'underscore': {
+//			exports: '_'
+//		},
+//		'jquery': {
+//			exports: '$'
+//		}
+//	}
 	shim: {
-		'backbone': {
-			deps: ['underscore'],
-			exports: 'backbone'
-		},
-		'underscore': {
-			exports: '_'
+		'app': {
+			deps: ['underscore', 'jquery', 'backbone'],
+			exports: 'App'
 		}
 	}
 });
 
-requirejs(['backbone', 'jquery'],
-function(backbone, $){
-	// Initialize...
-	console.log('energy!');
+require([
+	'app',
+], function(){
 });
