@@ -19,7 +19,17 @@
   <body>
 <!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
 
-	<button id="add-friend">Add Friend</button>
-	<ul id="friends-list"></ul>
+	<div id="profiles"></div>
+
+	<script id="profileTemplate" type="text/template">
+		<div class="profile">
+			<div class="info">
+				<div class="name">
+					<%= title %>
+				</div>
+				<%= content %>
+			</div>
+		</div>
+	</script>
   </body>
 </html>

@@ -10,9 +10,14 @@ requirejs.config({
 			exports: 'Backbone'
 		},
 		
-		underscore: {
+		'underscore': {
 			exports: '_'
+		},
+		
+		'utils' : {
+			exports: 'utils'
 		}
+		
 	}
 });
 
